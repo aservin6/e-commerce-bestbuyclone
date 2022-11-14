@@ -23,7 +23,7 @@ const SearchBar = () => {
         searchCtx.onSearch(userQuery);
         navigate("/search-page");
       }}
-      className="flex w-44 sm:w-52 justify-center border rounded-[4px] md:w-2/5"
+      className="flex w-44 sm:w-52 justify-center border rounded-[4px] md:w-2/5 bg-white"
     >
       <input
         onChange={changeHandler}
