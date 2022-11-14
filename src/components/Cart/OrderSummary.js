@@ -5,7 +5,7 @@ const OrderSummary = ({ cartValue, originalCartValue, totalItems, savings }) => 
     // Create a section with the Cart total and the total savings displayed, if the cart is empty, display that 
     <section
       id="order-summary"
-      className="bg-white border-dark border-opacity-30 px-3 h-[19rem] md:px-10 border"
+      className="bg-white border-dark border-opacity-30 px-3 h-[19rem] md:px-10 border "
     >
       {totalItems > 0 && (
         <div className="flex flex-col h-full pt-3 pb-5">

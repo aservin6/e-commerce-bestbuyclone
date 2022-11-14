@@ -19,21 +19,20 @@ const SearchBar = () => {
   return (
     <form
       onSubmit={(e) => {
-        console.log("form submitted");
         e.preventDefault();
         searchCtx.onSearch(userQuery);
         navigate("/search-page");
       }}
-      className="flex w-44 sm:w-52 justify-center md:w-2/5"
+      className="flex w-44 sm:w-52 justify-center border rounded-[4px] md:w-2/5"
     >
       <input
         onChange={changeHandler}
-        className="rounded-l-[4px] pl-1.5 py-0.5 text-dark placeholder:text-dark placeholder:text-sm placeholder:opacity-80 focus:outline-none w-10/12 md:w-11/12 md:py-2 md:pl-2"
+        className="pl-1.5 py-0.5 border-r border-lightGray text-dark placeholder:text-dark placeholder:text-sm placeholder:opacity-80 focus:outline-none w-10/12 md:w-full md:py-2 md:pl-2"
         type="text"
         placeholder="Search"
       />
       <button
-        className="bg-white border-l border-lightGray rounded-r-[4px] w-10"
+        className="bg-white w-10"
         type="submit"
       >
         <i className="fa-solid fa-magnifying-glass text-bestBuyBlue"></i>

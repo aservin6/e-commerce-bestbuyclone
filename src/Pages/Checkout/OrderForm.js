@@ -112,7 +112,7 @@ const OrderForm = () => {
       {shippingDetailsNeeded && (
         <form className="text-dark flex flex-col font-bold text-[15px] space-y-5">
           <label className="font-bold text-dark">Shipping Address</label>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-3">
             <div className="flex flex-col">
               <label>First Name</label>
               <input
@@ -194,7 +194,7 @@ const OrderForm = () => {
               </label>
             )}
           </div>
-          <div className="grid grid-cols-[1fr_25%_25%] gap-3">
+          <div className="flex flex-col md:grid md:grid-cols-[1fr_25%_25%] gap-3">
             <div className="flex flex-col">
               <label>City</label>
               <input

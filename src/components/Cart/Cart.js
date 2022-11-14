@@ -14,7 +14,7 @@ const Cart = () => {
 
   return (
     <Wrapper bgColor={"bg-lightGray"}>
-      <div className="container mx-auto pt-5 grid lg:grid-cols-[70%_30%] md:py-10 gap-5 md:px-4">
+      <div className="container mx-auto pt-5 grid gap-5 md:px-4 md:py-10 lg:grid-cols-[70%_30%]">
         {/* If the cart has items render the items */}
         {cartCtx.cart.length > 0 ? (
           <>
