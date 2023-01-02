@@ -32,8 +32,9 @@ const SearchBar = () => {
         placeholder="Search"
       />
       <button
-        className="bg-white w-10"
+        className="w-10 bg-white"
         type="submit"
+        aria-label="search"
       >
         <i className="fa-solid fa-magnifying-glass text-bestBuyBlue"></i>
       </button>

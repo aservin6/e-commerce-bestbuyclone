@@ -30,16 +30,16 @@ const TodaysTopPicksWidget = () => {
   }, []);
 
   return (
-    <div className="container mx-auto bg-white border border-dark border-opacity-30 p-5 h-fit">
+    <div className="container p-5 mx-auto bg-white border border-dark border-opacity-30 h-fit">
       <span className="font-bold text-dark">Today's top picks</span>
       {isLoading && <Loading />}
       {error && <Error error={error} />}
-      <ul className="grid grid-cols-2 pt-3 gap-6 md:grid-cols-4 md:gap-8 ">
+      <ul className="grid grid-cols-2 gap-6 pt-3 md:grid-cols-4 md:gap-8 ">
         {/* Map over the data and render a list item and pass in the object data */}
         {topPicks.map((item) => {
           return (
             <li className="flex flex-col items-center mx-auto" key={item.sku}>
-              <a href={`/${item.sku}`} className="mb-2">
+              <a href={`/${item.sku}`} className="mb-2" aria-label={`link to product`}>
                 <img
                   className="h-[7rem] w-[7rem] object-contain mx-auto aspect-square"
                   src={item.images.standard}

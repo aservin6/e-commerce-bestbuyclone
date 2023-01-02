@@ -30,27 +30,27 @@ const DealOfTheDayWidget = () => {
   }, []);
   
   return (
-    <div className="flex flex-col bg-white border border-dark border-opacity-30 p-5">
-      <span className="text-dark py-1 font-bold">
+    <div className="flex flex-col p-5 bg-white border border-dark border-opacity-30">
+      <span className="py-1 font-bold text-dark">
         <span className="text-white bg-errorRed px-1.5 py-1">Deal</span> of the
         Day
       </span>
       {isLoading && <Loading />}
       {error && <Error error={error} />}
       <div
-        className="flex flex-col justify-between mx-auto h-full text-dark px-5 gap-2"
+        className="flex flex-col justify-between h-full gap-2 px-5 mx-auto text-dark"
         key={dealOTD.sku}
       >
-        <a href={`/${dealOTD.sku}`} className="mb-6">
+        <a href={`/${dealOTD.sku}`} className="mb-6" aria-label="link to deal of the day">
           <img
-            className="object-contain w-9/12 mx-auto pt-8"
+            className="object-contain w-9/12 pt-8 mx-auto"
             src={dealOTD.image}
             alt=""
           />
         </a>
         <a
           href={`/${dealOTD.sku}`}
-          className="text-bestBuyBlue font-normal text-sm line-clamp-2 hover:text-dark hover:underline"
+          className="text-sm font-normal text-bestBuyBlue line-clamp-2 hover:text-dark hover:underline"
         >
           {dealOTD.name}
         </a>

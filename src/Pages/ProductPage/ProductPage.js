@@ -53,7 +53,7 @@ const ProductPage = () => {
       {/* If get request returns data, display the data, if not inform the user there is no data */}
       {product ? (
         <Wrapper bgColor={"bg-white"}>
-          <div className="container mx-auto py-4 px-3 lg:px-0 md:py-10">
+          <div className="container px-3 py-4 mx-auto lg:px-0 md:py-10">
             <section
               id="product-section"
               className="grid text-dark md:gap-10 md:grid-cols-2"
@@ -63,10 +63,10 @@ const ProductPage = () => {
             </section>
             {relatedProducts.length > 0 && (
               <section id="related-products" className="">
-                <h3 className="py-2 border-b border-dark border-opacity-30 font-bold text-dark">
+                <h3 className="py-2 font-bold border-b border-dark border-opacity-30 text-dark">
                   Related Products
                 </h3>
-                <ul className="grid-cols-2 grid pt-5 pb-10 gap-y-10 md:grid-cols-3 lg:flex lg:items-center">
+                <ul className="grid grid-cols-2 pt-5 pb-10 gap-y-10 md:grid-cols-3 lg:flex lg:items-center">
                   {relatedProducts.map((item, index) => {
                     return (
                       <RelatedProduct key={index} item={item} sku={item.sku} />
@@ -76,14 +76,14 @@ const ProductPage = () => {
               </section>
             )}
             <section id="about-product" className="md:mr-auto md:w-2/3">
-              <Accordion title={"Description"} content={product.longDescription} />
-              <Accordion title={"What's Included"} object={product.includedItemList} />
+              <Accordion title={"Description"} content={product.longDescription} id={"description"} />
+              <Accordion title={"What's Included"} object={product.includedItemList} id={"what's included"} />
             </section>
           </div>
         </Wrapper>
       ) : (
         <Wrapper>
-          <p className="text-errorRed text-3xl font-bold grid place-content-center h-96 text-center">
+          <p className="grid text-3xl font-bold text-center text-errorRed place-content-center h-96">
             Product can't be found using BestBuy api
           </p>
         </Wrapper>

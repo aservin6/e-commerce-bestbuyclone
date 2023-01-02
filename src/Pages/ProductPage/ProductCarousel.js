@@ -13,7 +13,7 @@ const ProductCarousel = ({ product }) => {
                 return;
               }
               return (
-                <div key={index} className="carousel-item w-full md:py-10">
+                <div key={index} className="w-full carousel-item md:py-10">
                   <img
                     id={`item${index}`}
                     src={image.href}
@@ -24,7 +24,7 @@ const ProductCarousel = ({ product }) => {
               );
             })}
           </div>
-          <div className="flex justify-center mx-auto w-full py-2 gap-2 flex-wrap lg:pb-10">
+          <div className="flex flex-wrap justify-center w-full gap-2 py-2 mx-auto lg:pb-10">
             {product.images.map((image, index) => {
               // If conditions are met the image is not rendered
               if (image.href.includes("prescaled") || image.width < 500 || image.height < 500) {
@@ -36,6 +36,7 @@ const ProductCarousel = ({ product }) => {
                   key={index}
                   href={`#item${index}`}
                   className="border border-dark border-opacity-30"
+                  aria-label="switch image"
                 >
                   <img
                     className="h-[32px] w-[32px] mx-auto object-contain p-0.5 lg:h-[64px] lg:w-[64px]"
